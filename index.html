@@ -1,332 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sujeeth Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo"><b>Sujeeth</b></div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>             
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Enhanced Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-container">
+            <!-- Animated Background -->
+            <div class="loader-bg">
+                <div class="floating-particles"></div>
+                <div class="geometric-shapes">
+                    <div class="shape triangle"></div>
+                    <div class="shape circle"></div>
+                    <div class="shape square"></div>
+                    <div class="shape hexagon"></div>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="loader-content">
+                <!-- Profile Image with Animation -->
+                <div class="loader-avatar">
+                    <!-- <div class="avatar-ring"></div> -->
+                    <div class="avatar-container">
+                        <!-- <img src="https://camo.githubusercontent.com/4d9f5ecceb711eec6e2018f38a5677dc657c9738d4a65ba3b928c41c0a45b439/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313336302f302a37513379765349765f7430696f4a2d5a2e676966" alt="Sujeeth" class="avatar-img"> -->
+                        <!-- <div class="avatar-glow"></div> -->
+                    </div>
+                </div>
+                
+                <!-- Typing Animation -->
+                <div class="typing-container">
+                    <div class="typing-line" data-text="Hello World!, I'm Sujeeth">
+                        <span class="typed-text"></span>
+                        <!-- <span class="cursor">|</span> -->
+                    </div>
+                    <!-- <div class="typing-line" data-text="I'm Sujeeth P">
+                        <span class="typed-text"></span>
+                        <span class="cursor"></span>
+                    </div>
+                    <div class="typing-line" data-text="Full Stack Developer & AI Enthusiast">
+                        <span class="typed-text"></span>
+                        <span class="cursor">|</span>
+                    </div> -->
+                </div>
+                
+                <!-- Progress Section -->
+                <div class="loading-progress">
+                    <div class="progress-text">
+                        <span id="progressText">Initializing...</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-glow"></div>
+                    </div>
+                    <div class="loading-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                
+                <!-- Skills Preview -->
+                <div class="skills-preview">
+                    <div class="skill-item" data-delay="1000">
+                        <!-- <i class="fab fa-react"></i>
+                        <span>React</span> -->
+                    </div>
+                    <div class="skill-item" data-delay="1200">
+                        <!-- <i class="fab fa-node-js"></i>
+                        <span>Node.js</span> -->
+                    </div>
+                    <div class="skill-item" data-delay="1400">
+                        <!-- <i class="fab fa-python"></i>
+                        <span>Python</span> -->
+                    </div>
+                    <div class="skill-item" data-delay="1600">
+                        <!-- <i class="fas fa-brain"></i>
+                        <span>AI/ML</span> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enter Button - Removed for auto-redirect -->
+            <!-- <div class="enter-button" id="enterButton">
+                <button class="enter-btn">
+                    <span>Enter Portfolio</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Sujeeth</span>
+               
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Sujeeth</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <ul>
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>  
-            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-            <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
-    <section id="profile">
-      <div class="hero-container">
-        <div class="section__text">
-          <p class="section__text__p1">Hello, I'm</p>
-          <h1 class="title animate-text">Sujeeth</h1>
-          <p class="section__text__p2 animate-text">I am a student at Kongu Engineering College</p>
-          <p class="typing-text">Passionate about <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
-          <div class="btn-container">
-            <button class="resume-btn">
-              <a href="assets\SujeethResume.pdf" target="_blank">
-                Resume
-              </a>
-               
-            </button>
-            <button class="secondary-btn">
-              <a href="#contact">Connect with me</a>
-            </button>
-          </div>
-          <div id="socials-container">
-            <img src="./assets/linkedin.png"
-                 alt="My LinkedIn profile"
-                 class="icon"
-                 onclick="location.href='https://www.linkedin.com/in/sujeeth-p-59490b312/'" />
-            <img src="./assets/github.png"
-                 alt="My Github profile"
-                 class="icon"
-                 onclick="location.href='https://github.com/Sujeeth-P/'" />
-          </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name">Sujeeth P</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typed-text">I am a </span>
+                    <span class="typewriter" id="typewriter"></span>
+                </div>
+                <p class="hero-description">
+                    Computer technology Student at Kongu Engineering College, passionate about technology 
+                    to solve real-world problems through innovative web development and AI solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="assets/SujeethResume.pdf" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/sujeeth-p-59490b312/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Sujeeth-P/" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:sujeeth9487@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="image-container">
+                    <img src="https://camo.githubusercontent.com/4d9f5ecceb711eec6e2018f38a5677dc657c9738d4a65ba3b928c41c0a45b439/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313336302f302a37513379765349765f7430696f4a2d5a2e676966" alt="Sujeeth Profile" class="profile-img" style="object-fit: cover ; object-position: 70% 100%;" >
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="section__pic-container">
-          <img src="./assets/my pic.png" alt="Sujeeth profile picture" class="profile-img" />
-          <div class="background-shape"></div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
         </div>
-        
-      </div>
     </section>
 
-    <section id="about">
-      <br>
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <!-- Added image container on the left -->
-        <div class="about-pic-container">
-          <img src="./assets/aboutt.png" alt="About Me Image" class="about-pic" />
-        </div>
-        
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <p>I'm Sujeeth, a Bachelor's student in Computer Science at Kongu Engineering College, passionate about leveraging technology to solve real-world problems. My academic journey has provided me with a strong foundation in programming languages (HTML, CSS, Python, Java, C), data structures, and algorithms, as well as hands-on experience in web development and UI/UX design. I thrive in collaborative environments and am committed to continuous learning to stay updated with industry trends. My passion for both technology and design drives me to deliver innovative and user-centric solutions.</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get To Know More</span>
+                <h2 class="section-title">About Me</h2>
             </div>
-          </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-duration="800">
+                    <p>
+                        I'm Sujeeth, a Bachelor's student in Computer Science at Kongu Engineering College, 
+                        passionate about leveraging technology to solve real-world problems. My academic journey 
+                        has provided me with a strong foundation in programming languages including HTML, CSS, 
+                        Python, Java, and C.
+                    </p>
+                    <p>
+                        I have hands-on experience in web development and UI/UX design. I thrive in collaborative environments and am committed 
+                        to continuous learning to stay updated with industry trends.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <!-- <span class="stat-number" data-count="6">0</span>
+                            <span class="stat-label">Projects Completed</span> -->
+                        </div>
+                        <div class="stat-item">
+                            <!-- <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Programming Languages</span> -->
+                        </div>
+                        <div class="stat-item">
+                            <!-- <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Years of Learning</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="about-cards" data-aos="fade-left" data-aos-duration="800">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>Bachelor's in Computer Science<br>Kongu Engineering College</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Development</h3>
+                        <p>Web Development<br>UI/UX Design</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI/ML</h3>
+                        <p>Object Detection<br>Computer Vision</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="skills">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills</h1>
-      <div class="skills-container">
-        <div class="skills-category">
-          <h2>Programming Languages</h2>
-          <div class="skill-item">
-            <div class="skill-info">
-              <h3>C</h3>
-              <p>85%</p>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">What I Know</span>
+                <h2 class="section-title">My Skills</h2>
             </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 85%"></div>
+            <div class="skills-content">
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>C</span>
+                            <!-- <span>85%</span> -->
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Java</span>
+                            <!-- <span>85%</span> -->
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Python</span>
+                            <!-- <span>80%</span> -->
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Web Development</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>HTML</span>
+                            <!-- <span>90%</span> -->
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>CSS</span>
+                            <!-- <span>85%</span> -->
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>UI/UX Design</span>
+                            <!-- <span>70%</span> -->
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info">
-              <h3>Java</h3>
-              <p>75%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 75%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info">
-              <h3>Python</h3>
-              <p>80%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 80%"></div>
-            </div>
-          </div>
         </div>
-        
-        <div class="skills-category">
-          <h2>Web Development</h2>
-          <div class="skill-item">
-            <div class="skill-info">
-              <h3>HTML</h3>
-              <p>90%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 90%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info">
-              <h3>CSS</h3>
-              <p>85%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 85%"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info">
-              <h3>UI/UX</h3>
-              <p>70%</p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress" style="width: 70%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="Projects">
-      <p class="section__text__p1">My works</p>
-      <h1 class="title" style="margin-bottom: 1.5em;">Projects</h1>
-    
-      <div class="cards-container">
-        <!-- Card 1 -->
-        <div class="card">
-          <div class="image">
-            <img src="assets/Face.png" alt="Face Detection">
-          </div>
-          <div class="proj-title">Face Detection</div>
-          <div class="project-details">
-            <h3>Face Detection</h3>
-            <p>A project using YOLOv8 for accurate face detection in images and video streams.</p>
-            <div class="project-links">
-              <a href="https://github.com/Sujeeth-P/YOLOv8-face-detection" target="_blank">GitHub</a>
-              
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
             </div>
-          </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/Face.png" alt="Face Detection Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sujeeth-P/YOLOv8-face-detection" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Face Detection</h3>
+                        <p>Advanced face detection system using YOLOv8 for accurate detection in images and video streams.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>YOLOv8</span>
+                            <span>OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="assets/fall(1).jpg" alt="Fall Detection Project">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sujeeth-P/Fall_detection_yolo" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Fall Detection System</h3>
+                        <p>AI-powered system to detect falls using YOLO object detection for safety monitoring.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>YOLO</span>
+                            <span>AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="assets/daily_journal.jpg" alt="Daily Journal App">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sujeeth-P/Daily-journal-application" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Daily Journal App</h3>
+                        <p>A web application for keeping track of daily thoughts and activities with a clean interface.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="assets/jarvis.png" alt="Personal AI Assistant">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sujeeth-P/My-personal-jarvis" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal AI Assistant</h3>
+                        <p>A voice-controlled AI assistant similar to Jarvis from Iron Man with advanced features.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>AI</span>
+                            <span>Voice Recognition</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="assets/360_F_265120140_JDrtS8mCEkykjnmn9h56ziLi5TWz5jFE.jpg" alt="IoT Bots">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sujeeth-P/IOT-bots" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>IoT Bots</h3>
+                        <p>Smart IoT robots designed for automation and remote control with advanced sensors.</p>
+                        <div class="project-tech">
+                            <span>IoT</span>
+                            <span>Arduino</span>
+                            <span>Sensors</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="assets/calc.png" alt="Android Calculator">
+                        <div class="project-overlay">
+                            <a href="https://github.com/Sujeeth-P/Simple_calc_android-studio" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Android Calculator</h3>
+                        <p>A clean and functional calculator app built with Android Studio with modern UI design.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Android Studio</span>
+                            <span>Mobile App</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    
-        <!-- Card 2 -->
-        <div class="card">
-          <div class="image">
-            <img src="assets/daily_journal.jpg" alt="Daily Journal App">
-          </div>
-          <div class="proj-title">Daily Journal App</div>
-          <div class="project-details">
-            <h3>Daily Journal App</h3>
-            <p>A web application for keeping track of daily thoughts and activities.</p>
-            <div class="project-links">
-              <a href="https://github.com/Sujeeth-P/Daily-journal-application" target="_blank">GitHub</a>
-               
-            </div>
-          </div>
-        </div>
-    
-        <!-- Card 3 -->
-        <div class="card">
-          <div class="image">
-            <img src="assets/fall(1).jpg" alt="Fall Detection">
-          </div>
-          <div class="proj-title">Fall Detection</div>
-          <div class="project-details">
-            <h3>Fall Detection</h3>
-            <p>An AI-powered system to detect falls using YOLO object detection.</p>
-            <div class="project-links">
-              <a href="https://github.com/Sujeeth-P/Fall_detection_yolo" target="_blank">GitHub</a>
-               
-            </div>
-          </div>
-        </div>
-    
-        <!-- Card 4 -->
-        <div class="card">
-          <div class="image">
-            <img src="assets/360_F_265120140_JDrtS8mCEkykjnmn9h56ziLi5TWz5jFE.jpg" alt="IoT Bots">
-          </div>
-          <div class="proj-title">IoT Bots</div>
-          <div class="project-details">
-            <h3>IoT Bots</h3>
-            <p>Smart IoT robots designed for automation and remote control.</p>
-            <div class="project-links">
-              <a href="https://github.com/Sujeeth-P/IOT-bots" target="_blank">GitHub</a>
-               
-            </div>
-          </div>
-        </div>
-    
-        <!-- Card 5 -->
-        <div class="card">
-          <div class="image">
-            <img src="assets/calc.png" alt="Simple Calculator">
-          </div>
-          <div class="proj-title">Simple Calculator</div>
-          <div class="project-details">
-            <h3>Simple Calculator</h3>
-            <p>An Android calculator app built with Android Studio.</p>
-            <div class="project-links">
-              <a href="https://github.com/Sujeeth-P/Simple_calc_android-studio" target="_blank">GitHub</a>
-               
-            </div>
-          </div>
-        </div>
-    
-        <!-- Card 6 -->
-        <div class="card">
-          <div class="image">
-            <img src="assets/jarvis.png" alt="Personal AI Assistant">
-          </div>
-          <div class="proj-title">Personal AI Assistant</div>
-          <div class="project-details">
-            <h3>Personal AI Assistant</h3>
-            <p>A voice-controlled AI assistant similar to Jarvis from Iron Man.</p>
-            <div class="project-links">
-              <a href="https://github.com/Sujeeth-P/My-personal-jarvis" target="_blank">GitHub</a>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      
-      <div class="contact-container">
-        <div class="contact-info">
-          <div class="contact-card">
-            <i class="fas fa-envelope"></i>
-            <h3>Email</h3>
-            <p><a href="mailto:sujeeth9487@gmail.com">sujeeth9487@gmail.com</a></p>
-          </div>
-          
-          <div class="contact-card">
-            <i class="fab fa-linkedin"></i>
-            <h3>LinkedIn</h3>
-            <p><a href="https://www.linkedin.com/in/sujeeth-p-59490b312/" target="_blank">Connect with me</a></p>
-          </div>
-          
-          <div class="contact-card">
-            <i class="fab fa-github"></i>
-            <h3>GitHub</h3>
-            <p><a href="https://github.com/Sujeeth-P/" target="_blank">See my repositories</a></p>
-          </div>
-        </div>
-        
-        <div class="contact-form">
-          <form  action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="3725cb30-ed5a-4406-b3d8-236d8570b25c">
-            <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <input type="text" id="subject" name="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group">
-              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
-        </div>
-      </div>
     </section>
 
-    <footer>
-      <p>&copy; 2023 Sujeeth. All Rights Reserved.</p>
-      <div class="footer-social">
-        <a href="https://www.linkedin.com/in/sujeeth-p-59490b312/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Sujeeth-P/" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:sujeeth9487@gmail.com"><i class="fas fa-envelope"></i></a>
-      </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="800">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:sujeeth9487@gmail.com">sujeeth9487@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/sujeeth-p-59490b312/" target="_blank">Connect with me</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/Sujeeth-P/" target="_blank">View my projects</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left" data-aos-duration="800">
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="3725cb30-ed5a-4406-b3d8-236d8570b25c">
+                        
+                        <div class="form-group">
+                            <input type="text" name="name" required>
+                            <label>Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" name="email" required>
+                            <label>Your Email</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="subject" required>
+                            <label>Subject</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" required></textarea>
+                            <label>Your Message</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>Sujeeth P</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/sujeeth-p-59490b312/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Sujeeth-P/" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:sujeeth9487@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sujeeth P. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <button id="scrollToTop" class="scroll-top-btn">
-      <i class="fas fa-arrow-up"></i>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
