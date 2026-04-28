@@ -40,7 +40,7 @@ const CursorFollower = () => {
 const BrandLogo = () => (
   <div className="fixed top-6 left-6 md:top-8 md:left-10 z-50 mix-blend-difference">
     <h1 className="font-sans font-black text-2xl md:text-4xl tracking-tighter text-white flex items-start">
-      MAHESH
+      SUJEETH
       <span className="text-xs md:text-lg font-medium ml-1 -mt-1 md:-mt-2">®</span>
     </h1>
   </div>
@@ -66,10 +66,10 @@ const AvailabilityBadge = () => (
 
 const SocialStrip = () => {
   const socials = [
-    { label: "GitHub", href: "https://github.com/MAHESHPPAI" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/mahesh-p-pai-b0987b2a8/" },
-    { label: "Instagram", href: "https://www.instagram.com/mahesh_3.14_/" },
-    { label: "Email", href: "mailto:maheshpailinked@gmail.com" },
+    { label: "GitHub", href: "https://github.com/Sujeeth-P" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/sujeeth-p" },
+    { label: "Website", href: "https://sujeeth.me" },
+    { label: "Email", href: "mailto:sujeethp.dev@gmail.com" },
   ];
   return (
     <motion.div
@@ -137,10 +137,10 @@ const SpinningCTA = () => (
 
 const MobileSocialStrip = () => {
   const socials = [
-    { label: "Github", icon: Github, href: "https://github.com/MAHESHPPAI" },
-    { label: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/mahesh-p-pai-b0987b2a8/" },
-    { label: "Instagram", icon: Instagram, href: "https://www.instagram.com/mahesh_3.14_/" },
-    { label: "Email", icon: Mail, href: "mailto:maheshpailinked@gmail.com" },
+    { label: "Github", icon: Github, href: "https://github.com/Sujeeth-P" },
+    { label: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/sujeeth-p" },
+    { label: "Website", icon: Instagram, href: "https://sujeeth.me" },
+    { label: "Email", icon: Mail, href: "mailto:sujeethp.dev@gmail.com" },
   ];
   return (
     <motion.div
@@ -212,7 +212,7 @@ const Index = () => {
               </svg>
             </a>
             <h1 className="font-sans font-bold text-7xl md:text-8xl lg:text-[9rem] xl:text-[11rem] leading-[0.85] tracking-tighter text-white uppercase text-left">
-              Driven<br />by logic
+              Code &<br />Create
             </h1>
           </motion.div>
         </div>
@@ -226,7 +226,7 @@ const Index = () => {
           >
             <div className="w-12 h-[2px] bg-white mb-6 md:hidden" />
             <p className="font-sans text-xs md:text-sm font-medium text-white leading-relaxed tracking-wide uppercase text-left">
-              Building robust software, automating the complex and focused on transforming static systems into intelligent ones.
+              Full Stack Developer turning innovative ideas into real-world projects using modern technologies, AI, and clean UI/UX.
             </p>
           </motion.div>
         </div>

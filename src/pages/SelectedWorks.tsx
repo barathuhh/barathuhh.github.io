@@ -6,39 +6,39 @@ import './ScrollStack.css';
 const projects = [
   {
     id: "001",
-    title: "Enterprise Resource Architecture",
-    stack: "React / Node.js / Firebase / Firestore",
-    description: "A full-stack ERP engine automating multi-currency invoicing, inventory logic, and international tax compliance for distributed teams.",
-    links: { live: "https://erpbeta.netlify.app", code: "#" },
-    image: "/p1.png",
+    title: "D-Kart: E-Commerce Platform",
+    stack: "MongoDB / Express.js / React.js / Node.js / Docker",
+    description: "A full-stack e-commerce web application built with the MERN stack. Features product catalog, shopping cart, user authentication, and responsive design — containerized with Docker and deployed on Vercel.",
+    links: { live: "https://dkart-client.vercel.app", code: "https://github.com/Sujeeth-P/Dkart_client" },
+    image: "/dkart.png",
     cta: "Live Project"
   },
   {
     id: "002",
-    title: "Geospatial Workforce Analytics",
-    stack: "React / Redux / Google Maps API/ Firebase",
-    description: "Real-time tracking system implementing location-based validation protocols and live route visualization for workforce monitoring.",
-    links: { live: "#", code: "#" },
-    image: "/p2.png",
+    title: "Sithee Food Products",
+    stack: "React / Vite / Tailwind CSS / Vercel",
+    description: "A professional business website for Sithee Food Products — featuring product showcases, service listings, and a modern responsive design with optimized performance.",
+    links: { live: "https://sitheefoodproducts.vercel.app", code: "https://github.com/Sujeeth-P/Sithee_food_products_cons_client" },
+    image: "/sithee.png",
     cta: "Live Project"
   },
   {
     id: "003",
-    title: "OrderEase: Real-time online table food ordering system",
-    stack: "React / Firebase / Node.js",
-    description: "A real-time restaurant table ordering system that allows customers to place food orders directly from their table while enabling admins to manage menus, waiters, and assign waiters to customers for seamless service coordination.",
-    links: { live: "https://github.com/MAHESHPPAI/OrderEase", code: "#" },
-    image: "./p3.png",
-    cta: "View on Github"
+    title: "TheWolfage Portfolio",
+    stack: "React / Vite / CSS / Framer Motion",
+    description: "A sleek, animated developer portfolio featuring smooth scroll animations, dynamic sections, and a bold visual identity with modern micro-interactions.",
+    links: { live: "https://thewolfage-porfolio.vercel.app", code: "https://github.com/Sujeeth-P/thewolfage_porfolio" },
+    image: "/wolfage.png",
+    cta: "Live Project"
   },
   {
     id: "004",
-    title: "BusBuddy: Transit Management Logic",
-    stack: "React / Firebase / Springboot / ngrok",
-    description: "A real-time campus transportation platform that enables students to book seats and track buses live, drivers to stream GPS data during journeys, and transport officers to manage fleet availability, monitoring, and notifications seamlessly.",
-    links: { live: "https://github.com/MAHESHPPAI/Busbuddy-latest", code: "#" },
-    image: "./p4.png",
-    cta: "View on Github"
+    title: "Elena's Artist Portfolio",
+    stack: "React / Vite / CSS / JavaScript",
+    description: "A visually rich portfolio crafted for an artist client — showcasing artwork galleries, bio sections, and a creative layout with smooth transitions and responsive design.",
+    links: { live: "https://artiest-portfolio.vercel.app", code: "https://github.com/Sujeeth-P/Elena-s_Portfolio" },
+    image: "/elen.png",
+    cta: "Live Project"
   },
 ];
 

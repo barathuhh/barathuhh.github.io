@@ -23,14 +23,14 @@ const MagicBento = () => {
           />
 
           <SwissItem
-            value={2}
+            value={1}
             suffix="+"
             label="Years Experience"
             description="Building software with architectural intent and predictable system behavior."
           />
 
           <SwissItem
-            value={500}
+            value={200}
             suffix="+"
             label="Engineering Hours"
             description="Engineering judgment refined through real-world constraints."
