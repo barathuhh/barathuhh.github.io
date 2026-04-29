@@ -12,7 +12,21 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+    {
+      name: "fix-mime-types",
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          if (req.url && (req.url.endsWith(".tsx") || req.url.endsWith(".ts"))) {
+            res.setHeader("Content-Type", "application/javascript");
+          }
+          next();
+        });
+      },
+    },
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
